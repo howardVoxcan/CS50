@@ -3,7 +3,7 @@
 CS50 is a full course of computer science in Harvard University (I've learnt through youtube (freeCodeCamp.org))
 This course go through many fields:
   - Scratch
-  - C
+  - C (I have already known before so I only write theory)
   - Arrays
   - Algorithms
   - Memory
