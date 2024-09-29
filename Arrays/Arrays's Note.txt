@@ -1,0 +1,58 @@
+Cipher text: result of encrypting some piece of information
+Encryption: the art and science of cryptography
+
+Problem:
+$ clang hello.c
+$ ./a.out (a refers to assembler output, and just the default file name)
+>hello, world
+$ mv a.out hello
+So we have to write code, compile it, and then rename it?
+Answer: Using command line arguments.
+
+Command line arguments is different from an argument to a function is just an additional word or key phrase after typing a command at prompt in terminal window that just modifies the behavior of that command
+Solution: 
+$ clang -o hello hello.c (-o: stand for output, it means, change the clang file output to a file called hello instead of the default a.out)
+$ ./hello
+
+Header files are saved in location like usr/include, once you include them in the code, all of their libraries can be accessed, header files have the return value.
+Literally compiler will compiles code, converts code to assembly code (This is kind of code which is closer to what the computers understand e.g: CPU)
+
+The order: Preprocessing => Compiling => Assembling => Linking
+In the linking section, many code will link together in just one code to make the code run properly
+
+Decompiling while possible and it’s one way of reverse engineering someone’s product odds are if you’re good enough to start reading code that’s been decompiled and reading through the messiness of it odds are you have the talent probably to just write that same program from Scratch yourself.
+
+Solutions when we have bugs:
+- First solution: printf. Because printf is the function to print anything so there’s no reason that you can’t temporarily use printf to print out the contents of variables what’s going on inside your program just to figure out where your mistake is and you can delete that line later.
+- Second solution: break points + debug50. In VSC, if you move your mouse to the left of the code line, there will be a red dot, if you click it, the debugger will execute all of the other lines except from the line you marked with break points. When you execute, to the left hand, there will be a window where it shows variables, registers.
+
+*To the second solution: You have to have libcs50
+1/ Go to terminal: 
+2/ Clone the github of CS50: 
+git clone https://github.com/cs50/libcs50.git
+3/ cd libcs50
+4/ make sudo make install
+
+If you still can’t use: 
+1/ Look for the directory of include of libcs50
+2/ Go to VS Code Press <Ctrl + Shift + P>
+3/ Search for <C/C++: Edit Configurations (JSON)>
+4/ In the include path, add the directory of the include file of libcs50
+=> Have the libcs50
+
+Third solution: rubber duck (Sounds kinda funny but it's actually works). It works when you "wrestling" with the code for hours but don't really work, you can just sound out the bug (the problem) you are having. 
+(Additionally, through wikipedia, rubber duck method means you can figure out through thinking verbally like trying to tell the rubber duck about what you are coding)
+-> It means don't just staring at the screen for hours, make it in a verbal way so that somehow you can actually figure the illogical in your code
+
+In C, when you use:
+int main(int argc, string argv[])
+    The argc stands for argument count
+    The argv[] stands for all the words you enter
+
+Question: what does int in int main(...) mean?
+Answer:
+int is always there for main and it indicates will always return an integer (default integer is 0 by how C is designed) 
+
+We can use the error code to check exit statuses due to encoding
+
+Cryptography: the art and science of encrypting information scrambling information to send and turn into cipher text. Thereby, only who know the algorithm theoretically can decrypt the process to get the information.

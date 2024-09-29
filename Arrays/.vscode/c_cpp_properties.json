@@ -1,0 +1,19 @@
+{
+  "configurations": [
+    {
+      "name": "windows-gcc-x64",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "D:/Learning/github/libcs50/build/include"  // Correct path to cs50.h
+      ],
+      "compilerPath": "C:/Program Files/mingw64/bin/gcc.exe",  // Path to GCC compiler
+      "cStandard": "c11",  // Set to C11 standard
+      "cppStandard": "c++17",  // Set to C++17 standard (adjust if necessary)
+      "intelliSenseMode": "windows-gcc-x64",
+      "compilerArgs": [
+        ""
+      ]
+    }
+  ],
+  "version": 4
+}
