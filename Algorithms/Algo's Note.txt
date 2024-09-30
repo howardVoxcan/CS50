@@ -39,5 +39,5 @@ So binary search will works better than linear search (SORTED ARRAYS)
 
 -SORTING ALGORITHM-
     + Selection sort ~ Bubble sort 
-    + Merge sort: using recursion, recursively split compare to a value we choose and compare 2 halves than put it back in order.
+    + Merge sort: using recursion, recursively split compare to a value we choose and compare 2 halves cdthan put it back in order.
 RECURSION: Use when the code redo itself again and again and again, but the problem is it only calls itself 
