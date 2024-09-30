@@ -1,0 +1,43 @@
+What's actually inside of a computer is of course RAM (Random Access Memory) and recall that if we kind of start to abstract this away
+Computer's memory is really just a grid of bites
+Don't look at the hardware anymore, look at a grid of bites like whereby each of bites to store char, int, long, etc. 
+
+Case: Just on an array, if you wanna look for a value, by eyes you can see it through, but computers can only access to do 1 thing at a time and cannot take it all in and find a number in an array so perhaps a decent metaphor is to consider the array of memory inside your computer really is a sequence of closed doors and if the computer wants to find some value in it, it has to do the digital equivalent of openning each door at a time.
+
+-SEARCHING ALGORITHM-
+Problem: There are several doors, there is one doors with 50$, how can we find it?
+First solution: Just search from the first to the last door until find the 50$ 
+-> This is called: Linear search
+Best case: First door
+Worst case: Last door
+
+<Pseudo code>
+<begin>
+    For each door from left to right (or right to left)
+        If 50$ is behind the door
+            Return true
+        Else
+            Return false
+<end>
+
+Second solution: *The money in each door has been sorted* we will look for the middle, if it's lower, look for the middle on the left; else, look for the middle on the right and recursion until found (or no door left to find -> return false)
+-> This is called: Binary search
+Best case: First door
+Worst case: No particle in array have the same value as the number that need to be looked for.
+
+<Pseudo code>
+<begin>
+    If 50 is behind middle door
+        Return true
+    Else if 50 < middle door
+        Search left half
+    Else if 50 > middle door
+        Search right half
+<end>
+
+So binary search will works better than linear search (SORTED ARRAYS)
+
+-SORTING ALGORITHM-
+    + Selection sort ~ Bubble sort 
+    + Merge sort: using recursion, recursively split compare to a value we choose and compare 2 halves than put it back in order.
+RECURSION: Use when the code redo itself again and again and again, but the problem is it only calls itself 
