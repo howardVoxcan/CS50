@@ -1,0 +1,63 @@
+Introduction:
+In today lecture, we will take a deeper look underneath the hood at how things like images and so much more is actually implemented using just zeros and ones.
+
+Case: there is a bit map (a bit map is a type of image it's a map of bits in the sense that you have the coordinate system of up down left right) 
+
+RGB: Using hexidecimal digits (From 00 -> FF (255 in decimal))
+Hexidecimal can be presented by binary by using 4 bits (since 4 bits can count up to 16, the same as F in hexidecimal) -> You can transfer 4 bits in a number to hexidecimal (This is known succinctly and commonly now in the world of photoshop, memory, images and the like is represented more succinctly as FF and that's why it just Maps really nicely to 4 bits)
+For more information, in the world of photoshop, the color can be seen as 6 hexidecimal digits
+For example:
+    - 000000: Black
+    - 111111: White
+    - 0000FF: all blue
+    - FF0000: all red 
+    - 00FF00: all green
+
+In facts, when you had error messages over the past few weeks from clang the compiler you might have even seen evidence of hexidecimal but we didn't call it out, it wasn't useful to know but it turns out a lot of programs and a lot of codes use hexidecimal for reason of more precise and succinct representation.
+
+There's a problem of using hexidecimal in the way using many number from decimal so they use <0>x<hexidecimal_value> (It's just a human convention to recognize to make it's ambiguous)
+
+Feature: Poking the computer's memory to do powerful things but can screw up everything and can cause more of segmentation faults.
+&: address -> show the address of the value in the computer 
+*: pointers -> point to address
+
+In an array, the computer will save the very first value of the array and then find the next number through address and so on.
+
+In facts, string is a char*, which char pointing to the first character of the string. In the string library, all the things related to char*.
+
+In this code:
+<begin>
+    int n = 50;
+    int *p = &n;
+<end>
+
+when we want to use p to show the value of n, we will do this:
+    printf("%i\n", *p);
+
+*p called dereference and help we to take the value of the address that the pointer is pointing to
+
+Question:
+    string a = "HI!";
+    string b = "HI!";
+    but a == b return false
+    why is that?
+
+Answer: Because in facts string is a char* so when we use a == b actually we are comparing the addresses of the string a and string b.
+
+Memory requesting function
+    - malloc: memory allocation - a function can be used to ask the operating system (like Mac, OS, Linux) anything for some number of bytes and it will return the first bite of memory that it found free for user 
+        Syntax: malloc (int) -> return memory needed and let a variable use it
+    - free on the opposite, after you have finished using the memory, you can free it by passing that same address and just hand it back to Mac OS or Linux and can tat memory later
+
+valgrind: valgrind ./<your program>
+It helps us control the error in memory 
+
+garbage values: values the you declare but don't give it an explicit value 
+
+What's under the hood when a function is called in C?
+    Memory broken up into different regions or segments
+    Machine Code, Globals, Heap -<direction>--> <--<direction>- Stack
+    Turns out Stack is where functions have variables and arguments stored temporarily, so when we call a function which has variables and arguments, stack is the chunk of memory and the computer's overall block of memory that are used for functions but anytime we call malloc is on Heap segments 
+    -> So when you called malloc (or functions) too many times you may got a segmentation fault.
+
+=> The reason we got random garbage values is because when we use the function and then when the variables go there, when we haven't change the values, it will use the number that we left on the memory that haven't changed 
