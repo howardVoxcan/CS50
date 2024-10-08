@@ -8,7 +8,7 @@ This course goes through many fields:
   - Arrays
   - Algorithms
   - Memory
-  - Data Structures
+  - Data Structures (Too easy, so there will be no section for this)
   - Python
   - SQL
   - HTML, CSS, Javascript
