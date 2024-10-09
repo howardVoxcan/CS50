@@ -9,7 +9,7 @@ This course goes through many fields:
   - Algorithms
   - Memory
   - Data Structures (Too easy, so there will be no section for this)
-  - Python
+  - Python (This is kinda new to me so I would prefer something more details so [Python](https://github.com/howardVoxcan/CS_Courses)
   - SQL
   - HTML, CSS, Javascript
   - Flask
