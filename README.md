@@ -10,7 +10,7 @@ This course goes through many fields:
   - Memory
   - Data Structures (Too easy, so there will be no section for this)
   - Python (This is kinda new to me so I would prefer something more details so [Python](https://github.com/howardVoxcan/CS_Courses)
-  - Artificial intelligence 
+  - Artificial intelligence ([AI](https://github.com/howardVoxcan/CS50_AI))
   - SQL
   - HTML, CSS, Javascript
   - Flask
